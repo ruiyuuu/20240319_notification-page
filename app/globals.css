@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --red: #F65351;
+  --blue: #0A317B;
+  --white: white;
+  --very-light-grayish-blue: #F7FAFD;
+  --light-grayish-blue-1: #E5EFFA;
+  --light-grayish-blue-2: #DDE7EE;
+  --grayish-blue: #939DAE;
+  --dark-grayish-blue: #5E6778;
+  --very-dark-blue: #1C202B;
+
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  h1{
+    @apply text-[21px] font-bold
+  }
+  p{
+    @apply text-[14px]
+  }
+  a{
+    @apply text-[14px] font-bold transition-all hover:text-blue
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
+}
